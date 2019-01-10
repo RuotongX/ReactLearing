@@ -24,7 +24,8 @@ export default (state = defaultState,action)=>{
         }
         case DELETE_VALUE: {
             const newState = JSON.parse(JSON.stringify(state));
-            newState.list.splice(action.value,1);
+            newState.list.splice(action.index,1);
+            console.log(action.index);
             return newState;
 
         }

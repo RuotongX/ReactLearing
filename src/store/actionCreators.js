@@ -11,5 +11,5 @@ export const getItemAction = () => ({
 
 export const getDeleteAction = (index) => ({
     type:DELETE_VALUE,
-    value:index
+    index:index
 })
