@@ -1,4 +1,4 @@
-import {CHANGE_INPUT_VALUE,CLICK,DELETE_VALUE} from "./actionTypes";
+import {CHANGE_INPUT_VALUE, CLICK, DELETE_VALUE, INIT_LIST_ACTION} from "./actionTypes";
 
 const defaultState = {
     inputValue:'',
@@ -28,6 +28,11 @@ export default (state = defaultState,action)=>{
             console.log(action.index);
             return newState;
 
+        }
+        case INIT_LIST_ACTION:{
+            const newState = JSON.parse(JSON.stringify(state));
+            newState.list = action.data;
+            return newState;
         }
         default:
             break;
